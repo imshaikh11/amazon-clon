@@ -34,26 +34,48 @@ function Home() {
                 </div>
 
                 <div className="home__row">
-                    <Product 
-                         id="04"
-                         title="2019 Apple MacBook Pro - Space Grey"
-                         price={215900.00}
-                         image="https://m.media-amazon.com/images/I/71p1D89L7RL._SL1500_.jpg"
+                    <Product
+                        id="04"
+                        title="2019 Apple MacBook Pro - Space Grey"
+                        price={215900.00}
+                        image="https://m.media-amazon.com/images/I/71p1D89L7RL._SL1500_.jpg"
                     />
-                    <Product 
-                         id="05"
-                         title="Nitho Drive Pro V16 Racing Wheel & Pedal Set"
-                         price={7099.00}
-                         image="https://m.media-amazon.com/images/I/71S-XvtqZsL._SL1500_.jpg"
-                    />
-                </div>
-
-                <div className="home__row">
-                    <Product 
+                    <Product
                         id="05"
+                        title="Nitho Drive Pro V16 Racing Wheel & Pedal Set"
+                        price={7099.00}
+                        image="https://m.media-amazon.com/images/I/71S-XvtqZsL._SL1500_.jpg"
+                    />
+
+                    <Product
+                        id="06"
                         title="Pintola Choco Spread Peanut Butter (Creamy) (1kg)"
                         price={399.00}
                         image="https://m.media-amazon.com/images/I/81DhS6U91VL._SL1500_.jpg"
+                    />
+
+                </div>
+
+                <div className="home__row">
+                    <Product
+                        id="07"
+                        title="Spotzero by Milton Prime Spin Mop with Big Wheels and Stainless Steel Wringer,Aqua Green"
+                        price={1199.00}
+                        image="https://m.media-amazon.com/images/I/81vwNP4jEcL._SL1500_.jpg"
+                    />
+
+                    <Product
+                        id="08"
+                        title="Jhula || Hanging Swing Chair || Indoor Furniture Swing (Standard) (White&Blue)"
+                        price={12800.00}
+                        image="https://m.media-amazon.com/images/I/81X78tJXnKL._SL1500_.jpg"
+                    />
+
+                    <Product
+                        id="09"
+                        title="Hovom Cotton Shorts for Boys and Girls - Regular Fit Color Block Shorts for Unisex, Multicolor - Pack of 3"
+                        price={499.00}
+                        image="https://m.media-amazon.com/images/I/61ePsWsiacL._UL1400_.jpg"
                     />
                 </div>
 
