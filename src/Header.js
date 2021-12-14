@@ -1,37 +1,50 @@
 import React from 'react';
-import './Checkout.css';
-import CheckoutProduct from './CheckoutProduct';
+import './Header.css';
+
+import SearchIcon from '@mui/icons-material/Search';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Link } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
-import Subtotal from './Subtotal';
 
-function Checkout() {
-  const [{cart},dispatch] = useStateValue();  
+function Header() {
+    const [{cart},dispatch] = useStateValue();
     return (
-        <div className="checkout">
-          <div className="checkout--left">
-              <img className="checkout--adv" src="https://images-eu.ssl-images-amazon.com/images/G/31/img20/Events/Jupiter21P1/pay_stripe_desk.png" alt="adv" />
-            <div>
-              <h3 className="checkout--title">Your Shopping Details</h3>
-             {
-              cart.map((item) => (
-                <CheckoutProduct
-                key={item.id}
-                id={item.id} 
-                title={item.title} 
-                price={item.price}
-                image={item.image}
-                 />
-              ))
-             }
-            </div>
-          </div>
-    
-          <div className="checkout--right">
-            <Subtotal/>
-          </div>
-        </div>
-      );
-    }
-    
+        <div className='header'> 
+        <Link to="/">
+            <img className="header__logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"/>
+        </Link>
+            <div className="header_search">
+                <input className="header_searchInput" type="text" />
+                {/* {material ui} */}
+                <SearchIcon className="header__searchIcon"/>
 
-export default Checkout
+            </div>
+            <div className="header__nav">
+                <div className='header__option'>
+                    <span 
+                       className="header__optionLineOne">Hello</span>
+                    <span
+                        className="header__optionLineTwo">sign In</span>
+                </div>
+                <div className='header__option'>
+                    <span className="header__optionLineOne">Return</span>
+                    <span className="header__optionLineTwo">& Orders</span>
+                        
+                </div>
+                <div className="header__option">
+                    <span className="header__optionLineOne">Your</span>
+                    <span className="header__optionLineTwo">Prime</span>
+                 </div>
+            </div>
+            <Link to="/checkout">
+            <div  className="header__optionBasket">
+                <ShoppingCartIcon  />
+                <span className="header_optionLineTwo header_basketCount">{cart?.length}</span>
+            </div>
+            </Link>
+            
+        </div>
+    )
+}
+
+export default Header
