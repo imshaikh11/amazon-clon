@@ -1,9 +1,10 @@
 *{
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-  background-color: darkgrey;
+  background-color: aquamarine;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

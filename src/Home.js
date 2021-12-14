@@ -6,83 +6,60 @@ function Home() {
     return (
         <div className="home">
             <div className="home__container">
-                <img className="home__img" src="https://images-ext-1.discordapp.net/external/I9ewjO4ecNRdyWeD_NNixr_UMI1n6xyuqsZyCuFfuwI/https/m.media-amazon.com/images/I/71UhgZQzskL.SX3000.jpg?width=1440&height=576" alt="" />
+                <img className="home__image" src="https://m.media-amazon.com/images/I/71UhgZQzskL._SX3000_.jpg" alt="" />
 
-
-                <div className="home__row">
-                    <Product
-                        id="01"
-                        title="See U in C by Ali Karim Sayed"
-                        price={4424.56}
-                        image="https://images-na.ssl-images-amazon.com/images/I/41SMlI+1PrL._SY344_BO1,204,203,200_.jpg"
-                    />
-
-                    <Product
-                        id="02"
-                        title="Apple iPhone 11 (64GB) - Black"
-                        price={50999.00}
-                        image="https://m.media-amazon.com/images/I/71i2XhHU3pL._SL1500_.jpghttps://images-na.ssl-images-amazon.com/images/I/41SMlI+1PrL._SY344_BO1,204,203,200_.jpg"
-                    />
-
-                    <Product
-                        id="03"
-                        title="Noise Air Buds Truly Wireless Earbuds"
-                        price={1599.00}
-                        image="https://m.media-amazon.com/images/I/51juWgr4R3L._SL1500_.jpg"
-                    />
-
+               <div className="home__row">
+               <Product 
+                  id="01"
+                  title="See u in C by Ali Karim Sayed (Author)"
+                  price={4450}
+                  image="https://images-na.ssl-images-amazon.com/images/I/41SMlI+1PrL._SX331_BO1,204,203,200_.jpg"
+                  />
+               <Product 
+                  id="02"
+                  title="boAt Xtend Smartwatch with Alexa Built-in, 1.69” HD Display "
+                  price={5000}
+                  image="https://m.media-amazon.com/images/I/61IMRs+o0iL._SL1500_.jpg"
+                  />
+                <Product 
+                  id="03"
+                  title="Apple iPhone 13 Mini (256GB) - Midnight"
+                  price={70000}
+                  image="https://m.media-amazon.com/images/I/61KeIxmldLL._SL1500_.jpg"
+                  />
                 </div>
 
                 <div className="home__row">
-                    <Product
-                        id="04"
-                        title="2019 Apple MacBook Pro - Space Grey"
-                        price={215900.00}
-                        image="https://m.media-amazon.com/images/I/71p1D89L7RL._SL1500_.jpg"
-                    />
-                    <Product
-                        id="05"
-                        title="Nitho Drive Pro V16 Racing Wheel & Pedal Set"
-                        price={7099.00}
-                        image="https://m.media-amazon.com/images/I/71S-XvtqZsL._SL1500_.jpg"
-                    />
-
-                    <Product
-                        id="06"
-                        title="Pintola Choco Spread Peanut Butter (Creamy) (1kg)"
-                        price={399.00}
-                        image="https://m.media-amazon.com/images/I/81DhS6U91VL._SL1500_.jpg"
-                    />
-
+                <Product 
+                  id="04"
+                  title="HP Chromebook x360 14-inch (35.56 cms)"
+                  price={50000}
+                  image="https://m.media-amazon.com/images/I/81hoonPUdxL._SL1500_.jpg"
+                  />
+               <Product
+                  id="06"
+                  title="2020 Apple MacBook Pro"
+                  price={120000}
+                  image="https://m.media-amazon.com/images/I/71HCR-N2O2L._SL1500_.jpg"
+                  />
                 </div>
 
                 <div className="home__row">
-                    <Product
-                        id="07"
-                        title="Spotzero by Milton Prime Spin Mop with Big Wheels and Stainless Steel Wringer,Aqua Green"
-                        price={1199.00}
-                        image="https://m.media-amazon.com/images/I/81vwNP4jEcL._SL1500_.jpg"
-                    />
-
-                    <Product
-                        id="08"
-                        title="Jhula || Hanging Swing Chair || Indoor Furniture Swing (Standard) (White&Blue)"
-                        price={12800.00}
-                        image="https://m.media-amazon.com/images/I/81X78tJXnKL._SL1500_.jpg"
-                    />
-
-                    <Product
-                        id="09"
-                        title="Hovom Cotton Shorts for Boys and Girls - Regular Fit Color Block Shorts for Unisex, Multicolor - Pack of 3"
-                        price={499.00}
-                        image="https://m.media-amazon.com/images/I/61ePsWsiacL._UL1400_.jpg"
-                    />
+                <Product 
+                  id="06"
+                  title="Mi 80 cm (32 inches) HD"
+                  price={160000}
+                  image="https://m.media-amazon.com/images/I/71Z+l05eSIS._SL1188_.jpg"
+                  
+                  />
                 </div>
-
             </div>
-
+              
+            
+            
         </div>
     )
 }
 
 export default Home
+

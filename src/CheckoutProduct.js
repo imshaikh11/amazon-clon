@@ -1,19 +1,21 @@
-import React from 'react';
-import './CheckoutProduct.css';
+import React from 'react'
+import './CheckoutProduct.css'
 
-function CheckoutProduct({id, title, price, image }) {
+const CheckoutProduct = ({id,title,price,image}) => { 
     return (
-        <div className='checkoutProduct'>
-            <img className='checkoutProductImage' src={image} alt=''/>
+        <div className="checkoutProduct">
+        <img className="checkoutProduct__Image" src={image}/>
 
-            <div className='checkoutProduct__info'>
-                <p className='checkoutProduct__title'>{title}</p>
-                <p className='checkoutProduct__price'>
+        <div className='checkoutProduct__info'>
+            <p className='checkoutProduct__title'>{title}</p>
+            <p className='checkoutProduct__price'>
                 <bold>₹</bold>
                 <strong>{price}</strong>
-                </p>
-            </div>
-            <button>Remove From Cart</button>
+            </p>
+            <button className='checkoutProduct__button'>Remove From Cart</button>
+        </div>
+        
+            
         </div>
     )
 }

@@ -1,61 +1,31 @@
-
 .header{
     background-color: black;
     display: flex;
     align-items: center;
     height: 60px;
-    top: 0;
+    position: sticky;
     z-index: 100;
 }
 
 .header__logo{
     width: 100px;
     margin: 0 20px;
-    margin-top: 18px;
+    margin-top:18px;
     object-fit: contain;
 }
-.header__addressLogo{
-    color: white;
-    display: flex;
-    align-items: center;
-}
 
-.header__address{
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.header__addressLine{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.header__addressLineOne{
-    font-size: 10px;
-}
-
-.header__addressLineTwo{
-    font-size: 13px;
-    font-weight: 700;
-}
-
-.header__search{
+.header_search{
     display: flex;
     flex: 1;
     align-items: center;
 }
 
-.header__searchInput{
+.header_searchInput{
     padding: 10px;
     height: 14px;
     border: none;
     width: 100%;
 }
-
 .header__searchIcon{
     background-color: #FAA945;
     padding: 5px;
@@ -66,15 +36,6 @@
     display: flex;
     justify-content: space-evenly;
 }
-
-.header__optionFlag{
-    margin-top: 5px;
-    margin-left: 8px;
-    height: 20px;
-    align-items: center;
-    border: none;
-}
-
 .header__option{
     color: white;
     display: flex;
@@ -83,22 +44,23 @@
     margin-right: 10px;
 }
 
-.heder__optionLineOne{
+.header__optionLineOne{
     font-size: 10px;
+
 }
 
-.heder__optionLineTwo{
+.header__optionLineTwo{
     font-size: 13px;
     font-weight: 700;
 }
 
-.header__cart{
+.header__optionBasket{
     color: white;
-    display: flex;
     align-items: center;
+    display: flex;
 }
 
-.header__cartCount{
+.header__basketCount{
     margin-left: 10px;
     margin-right: 10px;
 }
