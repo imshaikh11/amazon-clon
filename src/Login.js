@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import { Link , useHistory } from 'react-router-dom'
 import { auth } from './firebase';
-import './Login.css'
+import './Login.css';
+import logo from "./Images/logo2.png";
 
 function Login() {
 
@@ -47,7 +48,7 @@ function Login() {
     return (
         <div className='login'>
             <Link to = '/'>
-                <img className="login__logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"/>
+                <img className="login__logo" src={logo} alt='logo'/>
             </Link> 
 
             <div className='login__container'>
@@ -62,7 +63,7 @@ function Login() {
                 <p className='login__info'>
                     By continuing, you agree to Amazon's Conditions of Use and Privacy Notice.
                 </p>
-                <h4>Forgot Password?</h4>
+                <a href="#">Forgot Password?</a>
                 <button type='submit' onClick={register} className='login__registerButton'>Create Your Amazon Account</button>
             </div>
 

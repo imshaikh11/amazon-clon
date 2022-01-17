@@ -4,7 +4,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
-import { auth } from './firebase'
+import { auth } from './firebase';
+import logo from "./Images/logo2.png";
 
 function Header() {
     const [{cart,user},dispatch] = useStateValue();
@@ -18,7 +19,7 @@ function Header() {
     return (
         <div className='header'> 
         <Link to="/">
-            <img className="header__logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"/>
+            <img className="header__logo" src={logo} alt='logo'/>
         </Link>
             <div className="header_search">
                 <input className="header_searchInput" type="text" />

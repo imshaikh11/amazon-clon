@@ -26,7 +26,7 @@ function Subtotal() {
          thousandSeparator = {true}
          prefix = {"₹"}
       />      
-        <button className="subtotal__button">Procedd to buy</button>
+        <button onClick={e => history.push('/payment')} className="subtotal__button">Procedd to buy</button>
             
         </div>
     )

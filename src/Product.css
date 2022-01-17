@@ -11,6 +11,7 @@
     max-height: 400px;
     min-width: 100px;
     transition: 1s;
+    border-radius: 25px;
 }
 
 .product:hover{
@@ -46,4 +47,8 @@
     padding: 8px 50px;
     border-color: white;
     margin-top: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    
 }

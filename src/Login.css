@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #696969;
 }
 
 .login__logo{
@@ -19,9 +20,12 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 5px;
     padding: 30px;
+    box-shadow: 4px 4px 7px 7px rgb(224, 220, 216);
+    border-radius: 20px;
+    background-color: white;
 }
 
 .login__container h1{
@@ -38,12 +42,14 @@
     margin-bottom: 10px;
     width: 95%;
     background-color: white;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 6px 0px rgb(105, 99, 91);
 }
 
 .login__container p{
     margin-top: 15px;
     font-size: 12px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
 }
 
 .login__container h4{
@@ -59,6 +65,7 @@
     margin-top: 10px;
     border-color: #a88734;
     cursor: pointer;
+    border-radius: 15px;
 }
 
 .login__registerButton{
@@ -70,5 +77,6 @@
     margin-top: 10px;
     border-color: #a88734;
     cursor: pointer;
+    border-radius: 15px;
 }
 
