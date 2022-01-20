@@ -38,7 +38,8 @@
 }
 
 .product__button{
-    background-color: #F7CA00;
+    /*background-color: #F7CA00;*/
+    background: linear-gradient(225deg, #ffc719 , #e03065);
     cursor: pointer;
     color: black;
     border-color: black;
