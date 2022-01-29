@@ -1,26 +1,46 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CheckoutProduct from "./CheckoutProduct";
 import "./Payment.css";
 import { getCartTotal } from "./reducer";
 import { useStateValue } from "./StateProvider";
 import CurrencyFormat from 'react-currency-format';
+import axios from "axios";
 
 function Payment() {
     const [{ cart, user }, dispatch] = useStateValue();
-
     const stripe = useStripe();
     const elements = useElements();
-
     const [error, setError] = useState(null);
     const [disabled, setDisabled] = useState(true);
-
     const [processing, setProcessing] = useState("");
     const [succeeded, setSucceeded] = useState(false);
+    const [clientSecret, setClientSecret] = useState(true);
 
-    const handleSubmit = e => {
+    useEffect(() => {
+        // generate the special stripe secret which allows us to charge a customer
+        const getClientSecret = async () => {
+            const response = await axios({
+                method: 'post',
+                //stripe expect total amount in base currencies like Rupees to paise
+                url: `/payments/create?total=${getCartTotal(cart) * 100}`
+            });
+            setClientSecret(response.data.clientSecret)
+        }
 
-    }
+        getClientSecret();
+    }, [cart])
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        setProcessing(true);
+
+        const payload = await stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+                card: elements.getElement(CardElement)
+            }
+        });
+    };
 
     const handleChange = event => {
         setDisabled(event.empty);
@@ -71,9 +91,6 @@ function Payment() {
                                     renderText={(value) => (
                                         <>
                                             <p>Subtotal ({cart?.lenght} items):<strong>{value}</strong> </p>
-                                            <small className="subtotal--gift">
-                                                <input type="checkbox" /> This order contains a gift
-                                            </small>
                                         </>
                                     )}
                                     decimalScale={2}
@@ -88,6 +105,8 @@ function Payment() {
                                     </span>
                                 </button>
                             </div>
+                            {/* Errors */}
+                            {error && <div>{error}</div>}
                         </form>
                     </div>
                 </div>
