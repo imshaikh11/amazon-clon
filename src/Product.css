@@ -21,7 +21,8 @@
 
 .product__info{
     height: 450px;
-    width: 100%;
+    width: 90%;
+    max-height: 400px;
     object-fit: contain;
     margin-bottom: 15px;
 }
@@ -31,8 +32,10 @@
 }
 
 .product__image{
-    max-height: 275px;
+    max-height: 250px;
+    margin-top: 10px;
     width: 100%;
+    max-width: 400px;
     object-fit: contain;
     margin-bottom: 15px;
 }

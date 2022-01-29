@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { auth } from './firebase';
 import './Login.css';
-import logo from "./Images/logo2.png";
+import logo from "./Images/Newlogo2.png";
 import profile from "./Images/user-logo.png";
 
 function Login() {
